@@ -9,9 +9,8 @@ def searchInsert(self, nums, target):
 
         low = 0
         high = len(nums) - 1
-
+        # all about indexes
         while low <=high:
-            
             # compute the middle index
             med = (low + high) // 2
 
@@ -19,7 +18,6 @@ def searchInsert(self, nums, target):
                 low = med + 1
             elif nums[med] > target:
                 high = med - 1
-            
             else:
                 return med
         return low
@@ -32,11 +30,11 @@ TIME COMPLEXITY:
 - if target is at index n//4, or (n // 2 + n) // 2 = 3N//4, we neeed 2 comparisons
 
 
-- think about it as a binary tree, where each node shows the points that can be compared for a given number of comparisons 
+- think about it as a binary tree, where each node is  a possible value that can be compared for a given number of comparisons 
 (at depth k if i draw a line i have all the node i can reach with k comparisons)
 
-- to find the corrosponding indexes given the father:
-for the left  son just divide by 2, to find the right son take the middle point index and sum the fatherindex and divide by 2
+- to find the corrisponding indexes given the father:
+for the left  son just divide by 2, to find the right son take the middle point index and sum the father index and divide by 2
 
 
 - basically given k comparison i get 2 ^ (k-1) elements that i can reach depending on the previous choices
