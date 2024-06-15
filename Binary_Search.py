@@ -40,5 +40,5 @@ for the left  son just divide by 2, to find the right son take the middle point 
 - basically given k comparison i get 2 ^ (k-1) elements that i can reach depending on the previous choices
 - which is the max number of comparison i get get?
 - the number of times n can be divided by 2 so that the result = 1 (n // 2 ^ k = 1 )
-- then we get n = 2^l and so logn (basically, the number of comparison to reach the element at index 0)
+- then we get n = 2^k and so logn (basically, the number of comparison to reach the element at index 0)
 '''
